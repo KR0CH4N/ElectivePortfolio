@@ -1,4 +1,60 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// Devicon SVGs saved locally in public/skills/
+const icon = (name: string) => `/skills/${name}.svg`
+// Logos you download yourself
+const local = (file: string) => `/skills/${file}`
+
+const skillCards = [
+  {
+    title: 'Software Development',
+    summary: 'Python, JavaScript / TypeScript, HTML / CSS, Vue.js, Django, Node.js, Django REST Framework',
+    iconPath: 'M8 9l-4 3 4 3M16 9l4 3-4 3M13.5 6l-3 12',
+    logos: [
+      { name: 'Python', src: icon('python') },
+      { name: 'JavaScript', src: icon('javascript') },
+      { name: 'TypeScript', src: icon('typescript') },
+      { name: 'HTML5', src: icon('html5') },
+      { name: 'CSS3', src: icon('css3') },
+      { name: 'Vue.js', src: icon('vuejs') },
+      { name: 'Django', src: icon('django'), light: true },
+      { name: 'Node.js', src: icon('nodejs') },
+      { name: 'Django REST Framework', src: local('drf.png') },
+    ],
+  },
+  {
+    title: 'Databases',
+    summary: 'MySQL, PostgreSQL, SQLite',
+    iconPath: 'M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3',
+    logos: [
+      { name: 'MySQL', src: icon('mysql') },
+      { name: 'PostgreSQL', src: icon('postgresql') },
+      { name: 'SQLite', src: icon('sqlite') },
+    ],
+  },
+  {
+    title: 'Embedded Systems',
+    summary: 'ESP32, Arduino, Raspberry Pi, Embedded C, Microcontrollers, Sensors & Actuators',
+    iconPath: 'M7 7h10v10H7zM9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4',
+    logos: [
+      { name: 'ESP32', src: local('esp32.png') },
+      { name: 'Arduino', src: icon('arduino') },
+      { name: 'Arduino IDE', src: local('arduino-ide.png') },
+      { name: 'Raspberry Pi', src: icon('raspberrypi') },
+    ],
+  },
+  {
+    title: 'Other Skills',
+    summary: 'Git / GitHub, Linux (Ubuntu Server), Windows Server (AD DS, DNS, DHCP), Problem Solving, Team Collaboration',
+    iconPath: 'M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z',
+    logos: [
+      { name: 'Git', src: icon('git') },
+      { name: 'GitHub', src: icon('github'), light: true },
+      { name: 'Ubuntu Server', src: local('ubuntu.png') },
+      { name: 'Windows Server', src: local('windows-server.png') },
+    ],
+  },
+]
+</script>
 
 <template>
   <!-- ABOUT -->
@@ -18,58 +74,38 @@
       technologies, and working on engineering side projects that push my technical growth.
     </p>
 
-    <div class="skills-section">
+      <div class="skills-section">
       <h3 class="section-subtitle">Technologies &amp; Skills</h3>
 
-      <div class="skills-category">
-        <h4>Software Development</h4>
-        <div class="skill-tags">
-          <span>Python</span>
-          <span>Java</span>
-          <span>JavaScript / TypeScript</span>
-          <span>HTML / CSS</span>
-          <span>Vue.js</span>
-          <span> Django </span>
-          <span>Node.js</span>
-          <span>REST APIs</span>
-        </div>
-      </div>
+      <div class="skill-cards">
+        <article v-for="card in skillCards" :key="card.title" class="skill-card">
+          <svg class="skill-card-icon" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path :d="card.iconPath" />
+          </svg>
 
-      <div class="skills-category">
-        <h4>Databases</h4>
-        <div class="skill-tags">
-          <span>MySQL</span>
-          <span>PostgreSQL</span>
-          <span>SQLite</span>
-        </div>
-      </div>
+          <h4>{{ card.title }}</h4>
+          <p class="skill-card-summary">{{ card.summary }}</p>
 
-      <div class="skills-category">
-        <h4>Embedded Systems</h4>
-        <div class="skill-tags">
-          <span> ESP32</span>
-          <span>Arduino</span>
-          <span>Raspberry Pi</span>
-          <span>Embedded C</span>
-          <span>Microcontrollers</span>
-          <span>Sensors &amp; Actuators</span>
-        </div>
-      </div>
-
-      <div class="skills-category">
-        <h4>Other Skills</h4>
-        <div class="skill-tags">
-          <span>Git / GitHub</span>
-          <span>Linux</span>
-          <span>Windows Server (AD DS, DNS, DHCP)</span>
-          <span>Problem Solving</span>
-          <span>Team Collaboration</span>
-        </div>
+          <div class="skill-logos">
+            <img
+              v-for="logo in card.logos"
+              :key="logo.name"
+              :src="logo.src"
+              :alt="logo.name"
+              :title="logo.name"
+              :class="{ light: logo.light }"
+              loading="lazy"
+            />
+          </div>
+        </article>
       </div>
     </div>
+  </section>
 
     <!-- Education -->
-<section id="education" class="section">
+    <section id="education" class="section">
     <div class="edu-section">
       <h3 class="section-subtitle">Education</h3>
 
@@ -112,7 +148,6 @@
         </div>
       </div>
     </div>
-  </section>
 
     <div class="cert-section">
       <h3 class="section-subtitle">Certifications &amp; Licenses</h3>

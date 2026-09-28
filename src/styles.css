@@ -244,43 +244,83 @@ body {
   margin-bottom: 24px;
 }
 
-.skills-category {
-  margin-bottom: 20px;
+.skill-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
-.skills-category:last-child {
-  margin-bottom: 0;
-}
-
-.skills-category h4 {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 12px;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-tags span {
-  font-size: 13px;
-  color: var(--text-dim);
+.skill-card {
+  position: relative;
+  padding: 24px 20px;
   background: var(--bg-light);
   border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 5px 12px;
-  transition: all 0.2s;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
 }
 
-.skill-tags span:hover {
+.skill-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 45%;
+  background: var(--accent);
+  border-radius: 0 3px 3px 0;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
   border-color: var(--accent);
+}
+
+.skill-card-icon {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 16px;
   color: var(--accent);
-  background: var(--accent-dim);
+}
+
+.skill-card h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #e6f1ff;
+  margin-bottom: 8px;
+}
+
+.skill-card-summary {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-dim);
+  margin-bottom: 18px;
+}
+
+.skill-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-logos img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* dark logos (Django, GitHub) turned white so they show on the dark theme */
+.skill-logos img.light {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+@media (max-width: 1000px) {
+  .skill-cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 520px) {
+  .skill-cards { grid-template-columns: 1fr; }
 }
 
 /* === EDUCATION - Timeline === */
@@ -805,7 +845,6 @@ a.contact-row:hover .contact-chevron {
   .hero-badges { justify-content: center; }
   .hero-photo-inner { width: 180px; height: 180px; }
   .about-text { max-width: 100%; }
-  .skill-tags { justify-content: center; }
   .edu-timeline { padding-left: 24px; }
   .edu-dot { left: -22px; width: 12px; height: 12px; }
   .nav-menu { gap: 2px; }
