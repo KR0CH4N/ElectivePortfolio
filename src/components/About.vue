@@ -68,6 +68,8 @@
       </div>
     </div>
 
+    <!-- Education -->
+<section id="education" class="section">
     <div class="edu-section">
       <h3 class="section-subtitle">Education</h3>
 
@@ -110,6 +112,7 @@
         </div>
       </div>
     </div>
+  </section>
 
     <div class="cert-section">
       <h3 class="section-subtitle">Certifications &amp; Licenses</h3>
