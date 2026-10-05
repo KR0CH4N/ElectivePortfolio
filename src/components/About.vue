@@ -76,14 +76,14 @@ const skillCards = [
       certifications such as Networking Basics and Networking Devices &amp; Initial Configuration.
       I set up and automate Linux and Windows server environments, work with networking,
       containers, and CI/CD pipelines. I also write backend code in Python using
-      Django, and Node.js that runs on them, with experience also in frontend development using Vue.js, HTML, and CSS.
+      Django, and Node.js that runs on them, combined with frontend development using Vue.js, HTML, and CSS.
     </p>
 
     <p class="about-text">
       Aside from the software side of tech, I also have hands-on experience in Embedded Systems and Design. I have
       competed in the Robotics Competition during the Regional Convention 2025: 9th CPE Challenge at Saint Mary's University in Bayombong, Nueva Vizcaya, 
       particularly the Sumobot event. I also worked on multiple commission projects for clients, which includes 
-      the main system of a Smart Waste Bin for Plastic and Paper Detection using Computer Vision, and a full prototype of the Thermal Search and Navigation Drone System.
+      the main system of a Smart Waste Bin for Plastic and Paper Detection using Computer Vision, and a full prototype of a Thermal Search and Navigation Drone System.
     </p>
     <p class="about-text">
       As a proactive problem-solver, I enjoy taking concepts from ideation to working deployment.

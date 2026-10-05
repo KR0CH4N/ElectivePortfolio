@@ -17,6 +17,7 @@
         <div class="hero-badges">
           <span class="badge green dot">Open to Work</span>
           <span class="badge navy">Full-Stack Development</span>
+          <span class="badge navy">DevOps</span>
           <span class="badge navy">Systems Administration</span>
         </div>
       </div>
