@@ -9,7 +9,7 @@
         <h1 class="hero-name">Chrystvil Wong-Wong M. Baculi</h1>
         <h2 class="hero-subtitle">BS in Computer Engineering</h2>
         <p class="hero-desc">
-          I am a 4th-year Computer Engineering student passionate about backend development, computer networks and systems administration.
+          I am a 4th-year Computer Engineering student passionate about DevOps, infrastructure, and systems administration.
         </p>
         <p class="hero-desc">
           Welcome to my Portfolio!

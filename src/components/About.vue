@@ -1,10 +1,30 @@
 <script setup lang="ts">
-// Devicon SVGs saved locally in public/skills/
 const icon = (name: string) => `/skills/${name}.svg`
-// Logos you download yourself
 const local = (file: string) => `/skills/${file}`
 
 const skillCards = [
+  {
+    title: 'DevOps & CI/CD',
+    summary: 'GitHub Actions, Docker, Ansible, Git / GitHub',
+    iconPath: 'M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15',
+    logos: [
+      { name: 'Git', src: icon('git') },
+      { name: 'GitHub', src: icon('github'), light: true },
+      { name: 'GitHub Actions', src: local('github-actions.png') },
+      { name: 'Docker', src: local('docker.png') },
+      { name: 'Ansible', src: local('ansible.png') },
+    ],
+  },
+  {
+    title: 'Systems & Networking',
+    summary: 'Linux (Ubuntu Server), Windows Server, Nginx, Cisco networking',
+    iconPath: 'M4 4h16a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM4 14h16a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2zM6 7h.01M6 17h.01',
+    logos: [
+      { name: 'Ubuntu Server', src: local('ubuntu.png') },
+      { name: 'Windows Server', src: local('windows-server.png') },
+      { name: 'Nginx', src: local('nginx.png') },
+    ],
+  },
   {
     title: 'Software Development',
     summary: 'Python, JavaScript / TypeScript, HTML / CSS, Vue.js, Django, Node.js, Django REST Framework',
@@ -42,17 +62,6 @@ const skillCards = [
       { name: 'Raspberry Pi', src: icon('raspberrypi') },
     ],
   },
-  {
-    title: 'Other Skills',
-    summary: 'Git / GitHub, Linux (Ubuntu Server), Windows Server (AD DS, DNS, DHCP), Problem Solving, Team Collaboration',
-    iconPath: 'M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z',
-    logos: [
-      { name: 'Git', src: icon('git') },
-      { name: 'GitHub', src: icon('github'), light: true },
-      { name: 'Ubuntu Server', src: local('ubuntu.png') },
-      { name: 'Windows Server', src: local('windows-server.png') },
-    ],
-  },
 ]
 </script>
 
@@ -62,19 +71,27 @@ const skillCards = [
     <h2 class="section-title">About Me</h2>
 
     <p class="about-text">
-      I am a detail-oriented Computer Engineering senior and certified Civil Service Professional 
-      with a solid foundation in computer networking, backed by Networking Basics and 
-      Networking Devices &amp; Initial Configuration certifications from the Cisco Networking Academy. 
-      I combine technical proficiency in software development (Python, Django, Node.js) with hands-on experience 
-      in Windows/Linux server administration and embedded systems.
+      I'm a Computer Engineering senior and Civil Service Professional focused on DevOps and
+      infrastructure, with a networking foundation backed by Cisco Networking Academy
+      certifications such as Networking Basics and Networking Devices &amp; Initial Configuration.
+      I set up and automate Linux and Windows server environments, work with networking,
+      containers, and CI/CD pipelines. I also write backend code in Python using
+      Django, and Node.js that runs on them, with experience also in frontend development using Vue.js, HTML, and CSS.
+    </p>
+
+    <p class="about-text">
+      Aside from the software side of tech, I also have hands-on experience in Embedded Systems and Design. I have
+      competed in the Robotics Competition during the Regional Convention 2025: 9th CPE Challenge at Saint Mary's University in Bayombong, Nueva Vizcaya, 
+      particularly the Sumobot event. I also worked on multiple commission projects for clients, which includes 
+      the main system of a Smart Waste Bin for Plastic and Paper Detection using Computer Vision, and a full prototype of the Thermal Search and Navigation Drone System.
     </p>
     <p class="about-text">
-      As a proactive problem-solver, I enjoy taking concepts from ideation to working deployment. 
-      When I am not studying or coding, I love exploring new tools, keeping up with emerging 
+      As a proactive problem-solver, I enjoy taking concepts from ideation to working deployment.
+      When I am not studying or coding, I love exploring new tools, keeping up with emerging
       technologies, and working on engineering side projects that push my technical growth.
     </p>
 
-      <div class="skills-section">
+    <div class="skills-section">
       <h3 class="section-subtitle">Technologies &amp; Skills</h3>
 
       <div class="skill-cards">
@@ -102,10 +119,11 @@ const skillCards = [
         </article>
       </div>
     </div>
+
   </section>
 
-    <!-- Education -->
-    <section id="education" class="section">
+  <!-- EDUCATION -->
+  <section id="education" class="section">
     <div class="edu-section">
       <h3 class="section-subtitle">Education</h3>
 

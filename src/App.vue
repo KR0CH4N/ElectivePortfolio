@@ -2,6 +2,7 @@
 import { onBeforeUnmount, onMounted, provide, ref } from 'vue'
 import Navbar from './components/Navbar.vue'
 import About from './components/About.vue'
+import Projects from './components/Projects.vue'
 import Hero from './components/Hero.vue'
 import Contacts from './components/Contacts.vue'
 
@@ -36,6 +37,7 @@ onBeforeUnmount(() => {
     <main>
       <Hero />
       <About />
+      <Projects />
       <Contacts />
     </main>
 
