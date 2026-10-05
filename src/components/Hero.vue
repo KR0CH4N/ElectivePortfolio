@@ -22,7 +22,7 @@
       </div>
       <div class="hero-photo-wrap">
         <div class="hero-photo-inner">
-          <img src="/Wong Formal.png" alt="Portrait" class="hero-photo" />
+          <img src="/WongFormal.png" alt="Portrait" class="hero-photo" />
         </div>
       </div>
     </div>
