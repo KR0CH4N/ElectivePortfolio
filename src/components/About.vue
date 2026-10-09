@@ -1,8 +1,7 @@
 <script setup lang="ts">
-const baseUrl = import.meta.env.BASE_URL
 
-const icon = (name: string) => `${baseUrl}skills/${name}.svg`
-const local = (file: string) => `${baseUrl}skills/${file}`
+const icon = (name: string) => `./skills/${name}.svg`
+const local = (file: string) => `./skills/${file}`
 
 const skillCards = [
   {
