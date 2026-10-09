@@ -26,7 +26,7 @@ const projects = ref<Project[]>([
     name: 'Thermal FPV Drone System',
     brief: 'Raspberry Pi + ESP32 · Live Thermal/RGB Feeds',
     tag: 'Hardware',
-    cover: '/images/thermaldrone/dronepic1.png',
+    cover: './images/thermaldrone/dronepic1.png',
     description:
       "A Raspberry Pi + ESP32 drone system that streams live thermal and RGB camera feeds over MJPEG " +
       "and relays flight-controller telemetry (GPS, battery, altitude) to a React Native mobile app client. The Raspberry Pi " +
@@ -46,7 +46,7 @@ const projects = ref<Project[]>([
     name: 'Smart Bin Waste Sorting System',
     brief: 'Raspberry Pi 3B · TensorFlow Lite · Paper/Plastic Sorting',
     tag: 'IoT',
-    cover: '/images/smartwastebin/wastebinfull.png',
+    cover: './images/smartwastebin/wastebinfull.png',
     description:
       "An automated paper/plastic waste sorting system for the Raspberry Pi 3B. It is not a full prototype rather it is only the core system and functionality implemented. It continuously captures camera " +
       "frames, detects objects via background subtraction, and classifies them as Paper or Plastic using a " +
@@ -54,9 +54,9 @@ const projects = ref<Project[]>([
       "status (including FULL! once a bin fills up), and ultrasonic sensors pause sorting when a bin is full.",
     tech: ['Raspberry Pi 3B', 'Python', 'TensorFlow Lite', 'OpenCV', 'NumPy', 'I2C LCD', 'Servo', 'HC-SR04'],
     images: [
-      { src: '/images/smartwastebin/wastebinmain.png', alt: 'Waste Bin System' },
-      { src: '/images/smartwastebin/datasetwastebin.png', alt: 'Training Dataset Samples' },
-      { src: '/images/smartwastebin/wastebinfull.png', alt: 'Bin Full Detection' },
+      { src: './images/smartwastebin/wastebinmain.png', alt: 'Waste Bin System' },
+      { src: './images/smartwastebin/datasetwastebin.png', alt: 'Training Dataset Samples' },
+      { src: './images/smartwastebin/wastebinfull.png', alt: 'Bin Full Detection' },
     ],
   },
 
@@ -65,7 +65,7 @@ const projects = ref<Project[]>([
     name: 'RDC Technology Solutions, Inc. — Help Desk Portal',
     brief: 'IT Support Ticketing System · Production Deployed',
     tag: 'Production',
-    cover: '/images/rdcticketingsystem/landingpage.png',
+    cover: './images/rdcticketingsystem/landingpage.png',
     description:
       "Built and deployed a production IT support ticketing system for RDC Technology Solutions, Inc., " +
       "owned end-to-end from backend architecture to DevOps delivery. The Express.js/Node.js backend handles " +
@@ -74,9 +74,9 @@ const projects = ref<Project[]>([
       "workflow: Docker containerization, Nginx reverse proxy, SSL via Certbot, PM2 process management, and a cloud VPS server.",
     tech: ['Node.js / Express.js', 'MySQL', 'Docker', 'Nginx', 'Certbot / SSL', 'PM2', 'Cloud VPS'],
     images: [
-      { src: '/images/rdcticketingsystem/landingpage.png', alt: 'Landing Page' },
-      { src: '/images/rdcticketingsystem/dashboard.png', alt: 'Dashboard' },
-      { src: '/images/rdcticketingsystem/ticket.png', alt: 'Ticket View' },
+      { src: './images/rdcticketingsystem/landingpage.png', alt: 'Landing Page' },
+      { src: './images/rdcticketingsystem/dashboard.png', alt: 'Dashboard' },
+      { src: './images/rdcticketingsystem/ticket.png', alt: 'Ticket View' },
     ],
   },
 
@@ -85,16 +85,16 @@ const projects = ref<Project[]>([
     name: 'Student Sanction Management & Email Notification System',
     brief: 'PHP · MySQL · PHPMailer · Automated Notifications',
     tag: 'Production',
-    cover: '/images/sanctionsystem/sanctionview.png',
+    cover: './images/sanctionsystem/sanctionview.png',
     description:
       "Developed a web-based Student Sanction Management & Email Notification System for the College of Engineering " +
       "and Architecture at Cagayan State University – Carig Campus. The system digitizes sanction records, automates donation tracking, " +
       "and provides real-time transparency reports, with automated email notifications via PHPMailer.",
     tech: ['HTML / CSS / JS', 'PHP', 'MySQL', 'PHPMailer', 'InfinityFree'],
     images: [
-      { src: '/images/sanctionsystem/sanctionview.png', alt: 'Sanction View' },
-      { src: '/images/sanctionsystem/email.png', alt: 'Automated Email Notification' },
-      { src: '/images/sanctionsystem/transactions.png', alt: 'Transactions View' },
+      { src: './images/sanctionsystem/sanctionview.png', alt: 'Sanction View' },
+      { src: './images/sanctionsystem/email.png', alt: 'Automated Email Notification' },
+      { src: './images/sanctionsystem/transactions.png', alt: 'Transactions View' },
     ],
   },
   {
@@ -102,16 +102,16 @@ const projects = ref<Project[]>([
     name: 'Sumobot Robotics — Regional Convention 2025',
     brief: 'Arduino · Autonomous · Competition Ready',
     tag: 'Hardware',
-    cover: '/images/sumobot/sumofinal.jpg',
+    cover: './images/sumobot/sumofinal.jpg',
     description:
       "Designed and developed a sumobot for the Regional Convention 2025: 9th CPE Challenge at Saint Mary's University. " +
       "Built on an Arduino Nano with a DRV8833 motor driver, three ultrasonic sensors, and a line sensor for ring-edge detection. " +
       "Programmed to autonomously detect and engage opponents while surviving in-ring.",
     tech: ['Arduino Nano', 'DRV8833', 'Ultrasonic Sensors', 'Line Sensor', 'Autonomous'],
     images: [
-      { src: '/images/sumobot/sumo3d.png', alt: 'Sumo 3D Model' },
-      { src: '/images/sumobot/sumofinal.jpg', alt: 'Sumo Final Design' },
-      { src: '/images/sumobot/sumocompe.jpg', alt: 'Sumo Competition' },
+      { src: './images/sumobot/sumo3d.png', alt: 'Sumo 3D Model' },
+      { src: './images/sumobot/sumofinal.jpg', alt: 'Sumo Final Design' },
+      { src: './images/sumobot/sumocompe.jpg', alt: 'Sumo Competition' },
     ],
   },
 ])
