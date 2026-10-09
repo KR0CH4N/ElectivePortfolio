@@ -35,9 +35,9 @@ const projects = ref<Project[]>([
       "that the Pi relays over HTTP.",
     tech: ['Raspberry Pi', 'Flask', 'Python', 'AMG8833', 'Picamera2', 'OpenCV', 'ESP32 / Arduino', 'MPU6050', 'TinyGPS++', 'UART', 'PID Control'],
     images: [
-      { src: '/images/thermaldrone/dronepic1.png', alt: 'Thermal Drone' },
-      { src: '/images/thermaldrone/finalsetup.png', alt: 'Final System Setup' },
-      { src: '/images/thermaldrone/telemetryandsystemconfiguration.png', alt: 'Telemetry & System Configuration' },
+      { src: './images/thermaldrone/dronepic1.png', alt: 'Thermal Drone' },
+      { src: './images/thermaldrone/finalsetup.png', alt: 'Final System Setup' },
+      { src: './images/thermaldrone/telemetryandsystemconfiguration.png', alt: 'Telemetry & System Configuration' },
     ],
   },
 
