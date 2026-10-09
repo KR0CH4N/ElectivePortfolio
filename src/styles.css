@@ -162,6 +162,37 @@ body {
   transform-origin: 65% 40%;
 }
 
+/* === DOWNLOAD CV BUTTON === */
+.download-cv {
+  margin-bottom: 28px;
+}
+
+.download-cv-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.download-cv-button:hover {
+  background: var(--accent-dim);
+  transform: translateY(-2px);
+}
+
+.download-cv-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 /* === BADGES === */
 .badge {
   display: inline-flex;
